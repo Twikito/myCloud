@@ -1,0 +1,470 @@
+:root {
+    --main-regular: #74d0ff;
+    --main-darker: #2ca6e5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+header,
+nav,
+main,
+footer div {
+    /* Global inline-size definition: 620px in rem */
+    max-inline-size: 38.75rem;
+    margin-inline: auto;
+    padding: 0 1em;
+}
+
+a {
+    color: #07b66a;
+    text-decoration: underline;
+    transition: .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+strong {
+    color: var(--main-darker);
+}
+
+header {
+    margin-block-start: 3em;
+    margin-block-end: 4em;
+    text-align: center;
+    color: var(--main-regular);
+}
+
+header svg {
+    display: block;
+    max-inline-size: 10em;
+    margin-inline: auto;
+    margin-block-end: 1em;
+    fill: white;
+    animation: cloud 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate infinite;
+    filter:
+        drop-shadow(0 1px 0 #ccc)
+        drop-shadow(0 2px 0 #c9c9c9)
+        drop-shadow(0 3px 0 #bbb)
+        drop-shadow(0 5px 10px rgb(0 0 0 / .3))
+        drop-shadow(0 15px 20px rgb(0 0 0 / .2))
+        drop-shadow(0 15px 30px rgb(0 0 0 / .1));
+}
+
+h1 {
+    font-family: 'Source Sans 3', sans-serif;
+    margin: 0;
+    display: inline flow-root;
+    font-weight: 500;
+    font-size: 3.75em;
+    line-height: .8;
+    text-align: end;
+    letter-spacing: -.05em;
+}
+
+h1 span {
+    display: block;
+    margin-inline-end: .1em;
+    font-size: .3em;
+    letter-spacing: -.02em;
+}
+
+input,
+label {
+    display: none;
+}
+
+nav {
+    display: block flex;
+    flex-flow: row no-wrap;
+    justify-content: space-between;
+}
+
+nav a {
+    flex: 0 1 8em;
+    background-color: var(--main-regular);
+    color: white;
+    box-sizing: border-box;
+    padding: .5em;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #26ec96;
+}
+
+main section {
+    padding: 1.5em 0;
+}
+
+h2,
+h3 {
+    margin: 1em 0 .5em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3.75em;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--main-regular);
+    text-shadow: 0 -1px 0 #6a6a6a;
+    text-transform: capitalize;
+}
+
+blockquote {
+    font-style: italic;
+    quotes: "« "" »";
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+abbr {
+    text-decoration: underline dotted #6a6a6a;
+}
+
+figure {
+    margin: 2em 0;
+}
+
+figcaption,
+caption {
+    font-style: italic;
+    font-size: .875em;
+    margin: .5em 0;
+}
+
+figcaption {
+    text-align: end;
+}
+
+caption {
+    text-align: center;
+}
+
+pre {
+    padding: 1em 2em;
+    background-color: white;
+    border: 1px solid var(--main-regular);
+    box-shadow: 0 0 1em rgb(116 208 255 / .5);
+    border-radius: 1em;
+    overflow: auto;
+}
+
+code {
+    padding: .25em;
+    background-color: white;
+    border: 1px solid var(--main-regular);
+}
+
+table {
+    inline-size: 100%;
+    border-collapse: collapse;
+}
+
+col {
+    inline-size: 20%;
+}
+
+col:first-child {
+    inline-size: 40%;
+}
+
+col:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+col:target {
+  background-color: #2ca6e533;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fffa;
+}
+
+th,
+td {
+    padding: .75em 2%;
+    text-align: center;
+}
+
+th:first-child {
+    text-align: start;
+}
+
+thead,
+tfoot,
+tbody td {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tbody th {
+    font-weight: normal;
+}
+
+thead th a,
+tfoot td {
+    color: var(--main-darker);
+}
+
+tbody td {
+    color: #07b66a;
+}
+
+main div {
+    margin: 3em 0;
+    text-align: center;
+}
+
+main div a {
+    display: inline flow-root;
+    background-color: #ffc843;
+    color: white;
+    text-decoration: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3em;
+    padding: .1em .5em;
+    text-transform: capitalize;
+    box-shadow: 0 .1em 0 #ffa823;
+}
+
+main div a:hover,
+main div a:focus {
+    background-color: #26ec96;
+    translate: 0 .1em;
+    box-shadow: 0 .0 0 #06cc76;
+    transition-timing-function: ease-out;
+}
+
+main div a::before {
+    content: '⮋';
+    display: inline flow-root;
+    inline-size: 1em;
+    block-size: 1em;
+    line-height: 1.2em;
+    margin-inline-end: .25em;
+    transition: .2s ease-out;
+}
+
+main div a:hover::before,
+main div a:focus::before {
+    rotate: 360deg;
+}
+
+footer {
+    padding: 1.5em 0 2em;
+    background-color: var(--main-regular);
+}
+
+footer * {
+    color: white;
+}
+
+footer div {
+    display: block grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5em;
+    grid-auto-flow: row;
+}
+
+footer h3 {
+    text-shadow: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+}
+
+@media (max-width: 26em) {
+    header {
+        margin-block-start: 5em;
+        margin-block-end: 1em;
+    }
+
+    label,
+    input {
+        position: absolute;
+        display: block;
+    }
+
+    input {
+        /* Do not use display: none */
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    label {
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+
+    label span {
+        position: fixed;
+        inset-block-start: 1em;
+        inset-inline-start: 1em;
+        z-index: 10;
+        padding: .5em;
+        background-color: var(--main-regular);
+        color: white;
+    }
+
+    label span::before {
+        content: '☰';
+        display: inline flow-root;
+        margin-inline-end: .5em;
+        transition: .2s ease-in-out;
+    }
+
+    label:hover span,
+    input:focus ~ label span {
+        background-color: #26ec96;
+    }
+
+    label::before {
+        /* Outside nav area */
+        position: fixed;
+        inset: 0;
+        z-index: 8;
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgb(255 255 255 / .5);
+        pointer-events: none;
+        backdrop-filter: blur(2px);
+        transition: .2s ease-out;
+        content: '';
+    }
+
+    nav {
+        position: fixed;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inset-block-end: 0;
+        z-index: 9;
+        padding: 4em 1em 1em;
+        flex-direction: column;
+        justify-content: flex-start;
+        translate: -100%;
+        background-color: var(--main-regular);
+        transition: .2s ease-out;
+    }
+
+    nav a {
+        flex-basis: auto;
+        margin: .5em 0;
+        background-color: none;
+        text-align: start;
+    }
+
+    input:checked ~ nav {
+        translate: 0;
+    }
+
+    input:checked ~ nav a:hover,
+    input:checked ~ nav a:focus,
+    input:checked ~ label:hover span,
+    input:checked:focus ~ label span {
+        background-color: white;
+        color: var(--main-regular);
+    }
+
+    input:checked ~ label::before {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    input:checked ~ label span::before {
+        content: '✕';
+        rotate: 180deg;
+    }
+
+    h2,
+    h3 {
+        font-size: 2.75em;
+    }
+
+    colgroup {
+        display: none;
+    }
+
+    tr {
+        display: block flex;
+        margin: 1em 0;
+        flex-flow: row wrap;
+        align-items: stretch;
+        border: solid #d0d0d0;
+        border-width: .15em 0;
+        background-color: white;
+    }
+
+    tr > * {
+        display: inline flow-root;
+        box-sizing: border-box;
+        flex: 1 1 33%;
+    }
+
+    th:nth-child(even),
+    td:nth-child(even) {
+        background-color: #f0f0f0;
+    }
+
+    th:first-child {
+        text-align: center;
+    }
+
+    thead {
+        position: sticky;
+        inset-block-start: 3.5em;
+    }
+
+    thead th:first-child {
+        display: none;
+    }
+
+    tbody th,
+    tfoot th {
+        flex-basis: 100%;
+    }
+
+    main div a {
+        font-size: 2em;
+    }
+
+    footer div {
+        grid-template-columns: auto;
+    }
+}
+
+@keyframes cloud {
+    from {
+        translate: 2em;
+    }
+    to {
+        translate: -2em;
+    }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>☁ myCloud: HTML and CSS first practice for students</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<input type="checkbox" id="nav-trigger" role="button">
+	<label for="nav-trigger" tabindex="-1">
+		<span>menu</span>
+	</label>
+	<header>
+		<svg viewBox="0 0 640 512">
+			<!-- https://fontawesome.com/icons/cloud?f=classic&s=solid -->
+			<path d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/>
+		</svg>
+		<h1>
+			my<wbr>Cloud
+			<span>
+				my work, my place
+			</span>
+		</h1>
+	</header>
+	<nav>
+		<a href="#what">what?</a>
+		<a href="#demo">demo</a>
+		<a href="#features">features</a>
+		<a href="#download">download</a>
+	</nav>
+	<main>
+		<section id="what">
+			<h2>What the frak is that?</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet arcu ut nisi aliquet semper sodales lorem aliquet. Suspendisse ut ipsum et neque tincidunt scelerisque.</p>
+			<blockquote>In hac habitasse platea dictumst. Sed luctus fermentum arcu ut tempor. Sed id dictum ligula. Aenean ac enim enim, eget tincidunt lacus&hellip;</blockquote>
+			<p>Maecenas vel justo non mi posuere rhoncus sed eu augue. Ut eget eros metus. Quisque non imperdiet lacus. Curabitur velit leo, <a href="#">commodo id hendrerit vel</a>, posuere ut arcu. Nullam arcu ante, dignissim in pharetra eu, facilisis ut libero.</p>
+			<ul>
+				<li>Donec <strong>dui nisl</strong>, iaculis quis convallis in,</li>
+				<li>sodales nec lacus. Cum <strong>sociis natoque</strong> penatibus,
+					<ol>
+						<li>Cras ullamcorper,</li>
+						<li>dui non interdum mollis,</li>
+					</ol>
+				</li>
+				<li>et magnis dis <strong>parturient</strong> montes, nascetur ridiculus mus.
+					<ol start="3">
+						<li>urna dolor lacinia erat,</li>
+						<li>sed suscipit felis tellus eget odio.</li>
+					</ol>
+				</li>
+				<li>Fusce sagittis aliquet ipsum non ultricies.</li>
+			</ul>
+			<p>Donec id arcu <strong>non magna accumsan malesuada</strong> sed accumsan enim.</p>
+		</section>
+		<section id="demo">
+			<h2>Please show me!</h2>
+			<p>Vivamus rutrum velit a nisl faucibus eu sagittis urna condimentum. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading StyleSheet">CSS</abbr> Proin eu libero nulla, non vehicula ante. Cras malesuada sem id velit pretium sagittis.</p>
+			<figure>
+				<pre>
+label[for^="toggle"], [type=checkbox] {cursor: pointer}
+label[for^="toggle"] + [type=checkbox] {display: none}
+
+/* MEDIA QUERY */
+@media (max-width: 800px) {
+	section, #aside {
+		padding: 1em;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	header {
+		position: relative; 
+		padding: 1em .8em;
+		background: #2D2D2D;
+	}
+}</pre>
+				<figcaption>This is a frakking awesome code sample!</figcaption>
+			</figure>
+			<p>Nunc vel auctor orci. Nullam sit amet quam risus, vitae bibendum neque. Vestibulum vitae odio sed lorem <code>section</code> and <code>header</code> scelerisque faucibus. Integer convallis lacinia viverra.</p>
+			<p>Nam porta, mi vel ullamcorper porta, sem elit aliquet felis, at ullamcorper dolor ipsum quis velit. <a href="#">Phasellus condimentum</a>, neque eu malesuada ultricies, sem justo adipiscing justo, vel ultricies lorem odio in mauris.</p>
+		</section>
+		<section id="features">
+			<h2>Ok, so what's inside?</h2>
+			<table>
+				<caption>Outstanding features!</caption>
+				<colgroup>
+					<col>
+					<col id="col-web">
+					<col id="col-mobile">
+					<col id="col-desktop">
+				</colgroup>
+				<thead>
+					<tr>
+						<th></th>
+						<th scope="col">
+							<a href="#col-web">Web</a>
+						</th>
+						<th scope="col">
+							<a href="#col-mobile">Mobile</a>
+						</th>
+						<th scope="col">
+		  					<a href="#col-desktop">Desktop</a>
+						</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th scope="row">Price</th>
+						<td>Free!</td>
+						<td>Free!</td>
+						<td>Free!</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<th scope="row">Lorem ipsum</th>
+						<td>Yeah</td>
+						<td>Yeah</td>
+						<td>Yeah</td>
+					</tr>
+					<tr>
+						<th scope="row">Dolor sit amet</th>
+						<td>Yeah</td>
+						<td>Yeah</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">Consectetur adipiscing elit</th>
+						<td>Yeah</td>
+						<td>Yeah</td>
+						<td>Yeah</td>
+					</tr>
+					<tr>
+						<th scope="row">Proin neque ligula</th>
+						<td>Yeah</td>
+						<td></td>
+						<td>Yeah</td>
+					</tr>
+					<tr>
+						<th scope="row">Cum sociis natoque penatibus</th>
+						<td></td>
+						<td></td>
+						<td>Yeah</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="download">
+			<h2>High five, bro!</h2>
+			<p>Proin neque ligula, sagittis sed tincidunt at, scelerisque in nisl. Aenean non libero sed est scelerisque pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			<p>Aliquam tincidunt laoreet est, vel malesuada nunc vehicula a. Praesent rutrum auctor justo, posuere convallis <strong>magna aliquam sit amet</strong>. Donec ac risus ut eros elementum tempus vel eu urna. Sed dignissim ultrices felis, convallis mollis nisi suscipit nec. Nullam non tincidunt augue.</p>
+			<div>
+				<a href="#">download yeah!</a>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div>
+			<section>
+				<h3>Blog</h3>
+				<p>Duis pharetra, lorem in vulputate blandit, quam ipsum tincidunt lectus, sed tincidunt nisi mauris in leo. <a href="#">See more&hellip;</a></p>
+			</section>
+			<section>
+				<h3>Twitter</h3>
+				<p>RT <a href="#">@codrops</a> Responsive CSS Timeline with 3D Effect <a href="#">goo.gl/OkluS</a> <a href="#">#wdfr</a> <a href="#">#CSS3</a> — Nice!</p>
+			</section>
+		</div>
+	</footer>
+</body>
+
+</html>
