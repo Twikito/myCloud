@@ -3,6 +3,11 @@
     --main-darker: #2ca6e5;
 }
 
+::selection {
+    background-color: var(--main-darker);
+    color: white;
+}
+
 html {
     scroll-behavior: smooth;
 }
