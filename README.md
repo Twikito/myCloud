@@ -2,7 +2,7 @@
 
 ## Statement
 
-You'll have to code [this mockup](mockup.png) with __HTML and CSS__ according to the state of the art, with __responsive__ adaptations for mobile.
+You'll have to code [this mockup](https://cdn.jsdelivr.net/gh/Twikito/myCloud/mockup.png) with __HTML and CSS__ according to the state of the art, with __responsive__ adaptations for mobile.
 
 But you can use:
 - __no class__,
