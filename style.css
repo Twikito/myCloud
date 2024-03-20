@@ -55,11 +55,12 @@ header svg {
     fill: white;
     animation: cloud 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate infinite;
     filter:
-        drop-shadow(0 1px 0 #eee)
-        drop-shadow(0 2px 0 #ddd)
-        drop-shadow(0 3px 0 #ccc)
-        drop-shadow(0 5px 5px rgb(0 0 0 / .3))
-        drop-shadow(0 15px 15px rgb(0 0 0 / .1));
+        drop-shadow(0 0.1em 0 #eee)
+        drop-shadow(0 0.1em 0 #ddd)
+        drop-shadow(0 0.1em 0 #ccc)
+        drop-shadow(0 0.1em 0 #bbb)
+        drop-shadow(0 0.1em 0.1em rgb(0 0 0 / .3))
+        drop-shadow(0 1em 1em rgb(0 0 0 / .2));
 }
 
 h1 {
