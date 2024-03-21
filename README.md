@@ -21,13 +21,16 @@ __Fonts__:
 - `Yanone Kaffeesatz`
 
 __Colors__:
-- `#74d0ff` blue,
-- `#2ca6e5` dark blue,
+- `#4696D0` blue,
+- `#2877B0` dark blue,
 - `#f7f7f7` background grey,
 - `#6a6a6a` text color,
 - `#ffc843` orange,
 - `#ffa823` dark orange,
-- `#07b66a` green
+- `#B25F03` brown
+- `#26ec96` green
+- `#18A464` dark green
+- `#4C5D55` darker green
 
 ## Result
 
