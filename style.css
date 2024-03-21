@@ -1,10 +1,13 @@
 :root {
-    --main-regular: #74d0ff;
-    --main-darker: #2ca6e5;
+    --primary: #4696D0;
+    --primary-dark: #2877B0;
+	--secondary: #26ec96;
+	--secondary-dark: #18A464;
+	--secondary-darker: #4C5D55;
 }
 
 ::selection {
-    background-color: var(--main-darker);
+    background-color: var(--primary-dark);
     color: white;
 }
 
@@ -31,9 +34,9 @@ footer div {
 }
 
 a {
-    color: #07b66a;
+    color: var(--secondary-dark);
     text-decoration: underline;
-    transition: .2s ease-in-out;
+    transition: .2s ease-out;
 }
 
 a:hover,
@@ -42,14 +45,14 @@ a:focus {
 }
 
 strong {
-    color: var(--main-darker);
+    color: var(--primary-dark);
 }
 
 header {
     margin-block-start: 3em;
     margin-block-end: 4em;
     text-align: center;
-    color: var(--main-regular);
+    color: var(--primary);
 }
 
 header svg {
@@ -99,7 +102,7 @@ nav {
 
 nav a {
     flex: 0 1 8em;
-    background-color: var(--main-regular);
+    background-color: var(--primary);
     color: white;
     box-sizing: border-box;
     padding: .5em;
@@ -109,7 +112,8 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    background-color: #26ec96;
+    background-color: var(--secondary);
+	color: var(--secondary-darker);
 }
 
 main section {
@@ -123,7 +127,7 @@ h3 {
     font-size: 3.75em;
     font-weight: 500;
     line-height: 1;
-    color: var(--main-regular);
+    color: var(--primary);
     text-shadow: 0 -1px 0 #6a6a6a;
     text-transform: capitalize;
 }
@@ -167,7 +171,7 @@ caption {
 pre {
     padding: 1em 2em;
     background-color: white;
-    border: 1px solid var(--main-regular);
+    border: 1px solid var(--primary);
     box-shadow: 0 0 1em rgb(116 208 255 / .5);
     border-radius: 1em;
     overflow: auto;
@@ -176,7 +180,7 @@ pre {
 code {
     padding: .25em;
     background-color: white;
-    border: 1px solid var(--main-regular);
+    border: 1px solid var(--primary);
 }
 
 table {
@@ -227,11 +231,11 @@ tbody th {
 
 thead th a,
 tfoot td {
-    color: var(--main-darker);
+    color: var(--primary-dark);
 }
 
 tbody td {
-    color: #07b66a;
+    color: var(--secondary-dark);
 }
 
 main div {
@@ -240,9 +244,11 @@ main div {
 }
 
 main div a {
-    display: inline flow-root;
+    display: inline flex;
+	align-items: center;
+	gap: .25em;
     background-color: #ffc843;
-    color: white;
+    color: #B25F03;
     text-decoration: none;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 3em;
@@ -253,30 +259,28 @@ main div a {
 
 main div a:hover,
 main div a:focus {
-    background-color: #26ec96;
+    background-color: var(--secondary);
+	color: var(--secondary-darker);
     translate: 0 .1em;
-    box-shadow: 0 .0 0 #06cc76;
-    transition-timing-function: ease-out;
+    box-shadow: 0 .0 0 var(--secondary-dark);
 }
 
-main div a::before {
-    content: '⮋';
-    display: inline flow-root;
+main div a svg {
     inline-size: 1em;
     block-size: 1em;
-    line-height: 1.2em;
-    margin-inline-end: .25em;
-    transition: .2s ease-out;
+	fill: currentcolor;
+    transition: inherit;
+	transition-property: rotate;
 }
 
-main div a:hover::before,
-main div a:focus::before {
+main div a:hover svg,
+main div a:focus svg {
     rotate: 360deg;
 }
 
 footer {
     padding: 1.5em 0 2em;
-    background-color: var(--main-regular);
+    background-color: var(--primary);
 }
 
 footer * {
@@ -334,7 +338,7 @@ footer a:focus {
         inset-inline-start: 1em;
         z-index: 10;
         padding: .5em;
-        background-color: var(--main-regular);
+        background-color: var(--primary);
         color: white;
     }
 
@@ -347,7 +351,7 @@ footer a:focus {
 
     label:hover span,
     input:focus ~ label span {
-        background-color: #26ec96;
+        background-color: var(--secondary);
     }
 
     label::before {
@@ -374,7 +378,7 @@ footer a:focus {
         flex-direction: column;
         justify-content: flex-start;
         translate: -100%;
-        background-color: var(--main-regular);
+        background-color: var(--primary);
         transition: .2s ease-out;
     }
 
@@ -394,7 +398,7 @@ footer a:focus {
     input:checked ~ label:hover span,
     input:checked:focus ~ label span {
         background-color: white;
-        color: var(--main-regular);
+        color: var(--primary);
     }
 
     input:checked ~ label::before {
@@ -430,7 +434,7 @@ footer a:focus {
     tr > * {
         display: inline flow-root;
         box-sizing: border-box;
-        flex: 1 1 33%;
+        flex: 1;
     }
 
     th:nth-child(even),
