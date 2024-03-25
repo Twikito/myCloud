@@ -16,9 +16,9 @@ Pay particular attention to __semantics__.
 ## What you need to know
 
 __Fonts__:
-- `Inter`
-- `Source Sans 3`
-- `Yanone Kaffeesatz`
+- [`Inter`](https://fonts.google.com/specimen/Inter)
+- [`Source Sans 3`](https://fonts.google.com/specimen/Source+Sans+3)
+- [`Yanone Kaffeesatz`](https://fonts.google.com/specimen/Yanone+Kaffeesatz)
 
 __Colors__:
 - `#4696D0` blue,
