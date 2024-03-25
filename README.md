@@ -1,8 +1,14 @@
 # myCloud: HTML and CSS first practice for students
 
+## Context
+
+You received [this mockup](https://cdn.jsdelivr.net/gh/Twikito/myCloud/mockup.png) from the designer, without any further information. This often happens.
+
+All you know is that you need to optimize this page for SEO.
+
 ## Statement
 
-You'll have to code [this mockup](https://cdn.jsdelivr.net/gh/Twikito/myCloud/mockup.png) with __HTML and CSS__ according to the state of the art, with __responsive__ adaptations for mobile.
+You'll have to code the page with __HTML and CSS__ according to the state of the art, with __responsive__ adaptations for mobile.
 
 But you can use:
 - __no class__,
