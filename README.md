@@ -22,15 +22,15 @@ Pay particular attention to __semantics__.
 ## What you need to know
 
 __Fonts__:
-- [`Inter`](https://fonts.google.com/specimen/Inter)
+- [`Noto Serif`](https://fonts.google.com/specimen/Noto+Serif)
 - [`Source Sans 3`](https://fonts.google.com/specimen/Source+Sans+3)
-- [`Yanone Kaffeesatz`](https://fonts.google.com/specimen/Yanone+Kaffeesatz)
+- [`Oswald`](https://fonts.google.com/specimen/Oswald)
 
 __Colors__:
 - `#4696D0` blue,
 - `#2877B0` dark blue,
-- `#f7f7f7` background grey,
-- `#6a6a6a` text color,
+- `#f5f5f5` background grey,
+- `#333333` text color,
 - `#ffc843` orange,
 - `#ffa823` dark orange,
 - `#B25F03` brown
