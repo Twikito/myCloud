@@ -38,6 +38,9 @@ __Colors__:
 - `#18A464` dark green
 - `#4C5D55` darker green
 
+__Icons__:
+- The icons come from [Font Awesome Free](https://fontawesome.com) by [@fontawesome](https://github.com/FortAwesome/Font-Awesome)
+
 ## Result
 
 Here's an example of the expected result: [twikito.github.io/myCloud/](https://twikito.github.io/myCloud/).
