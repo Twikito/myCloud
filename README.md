@@ -29,12 +29,12 @@ __Fonts__:
 __Colors__:
 - `#4696D0` blue,
 - `#2877B0` dark blue,
-- `#f5f5f5` background grey,
+- `#F5F5F5` background grey,
 - `#333333` text color,
-- `#ffc843` orange,
-- `#ffa823` dark orange,
+- `#FFC843` orange,
+- `#FFA823` dark orange,
 - `#B25F03` brown
-- `#26ec96` green
+- `#26EC96` green
 - `#18A464` dark green
 - `#4C5D55` darker green
 
