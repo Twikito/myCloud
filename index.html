@@ -8,7 +8,7 @@
 	<meta name="robots" content="noindex, nofollow">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Source+Sans+3:wght@200..900&display=swap">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -34,62 +34,72 @@
 		<a href="#what">what?</a>
 		<a href="#demo">demo</a>
 		<a href="#features">features</a>
+		<a href="#early-access">early</a>
 		<a href="#download">download</a>
 	</nav>
 	<main>
 		<section id="what">
-			<h2>What the frak is that?</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet arcu ut nisi aliquet semper sodales lorem aliquet. Suspendisse ut ipsum et neque tincidunt scelerisque.</p>
-			<blockquote>In hac habitasse platea dictumst. Sed luctus fermentum arcu ut tempor. Sed id dictum ligula. Aenean ac enim enim, eget tincidunt lacus&hellip;</blockquote>
-			<p>Maecenas vel justo non mi posuere rhoncus sed eu augue. Ut eget eros metus. Quisque non imperdiet lacus. Curabitur velit leo, <a href="#">commodo id hendrerit vel</a>, posuere ut arcu. Nullam arcu ante, dignissim in pharetra eu, facilisis ut libero.</p>
+			<h2>
+				<a href="#what" title="Direct link">#</a>
+				What the frak is that?
+			</h2>
+			<p>With myCloud, you can <strong>securely store, access, and manage your files from anywhere in the world</strong>. Whether you're a busy professional needing to access critical documents on the go or a student looking to securely store your assignments, myCloud provides <a href="#">the perfect platform</a> for seamless file management.</p>
+			<blockquote>
+				<p>myCloud revolutionizes the way we manage and access our files. Its seamless syncing and robust security make it a must-have for anyone looking to stay productive on the go.</p>
+				<cite>Peter Venkman, parapsychologist and CEO of the Ghostbusters</cite>
+			</blockquote>
+			<p>At myCloud, we understand the importance of having a reliable and secure platform to store your digital assets. Here's what you can expect from myCloud:</p>
 			<ul>
-				<li>Donec <strong>dui nisl</strong>, iaculis quis convallis in,</li>
-				<li>sodales nec lacus. Cum <strong>sociis natoque</strong> penatibus,
+				<li><strong>Flexible Access</strong>: Access your files from any device with an internet connection:
 					<ol>
-						<li>Cras ullamcorper,</li>
-						<li>dui non interdum mollis,</li>
+						<li>laptop</li>
+						<li>smartphone</li>
+						<li>tablet</li>
 					</ol>
 				</li>
-				<li>et magnis dis <strong>parturient</strong> montes, nascetur ridiculus mus.
-					<ol start="3">
-						<li>urna dolor lacinia erat,</li>
-						<li>sed suscipit felis tellus eget odio.</li>
+				<li><strong>Effortless Collaboration</strong>: Share files and collaborate in real-time, regardless of your location, with
+					<ol start="4">
+						<li>colleagues</li>
+						<li>friends</li>
+						<li>family</li>
 					</ol>
 				</li>
-				<li>Fusce sagittis aliquet ipsum non ultricies.</li>
+				<li><strong>Peace of Mind</strong>: Rest assured knowing that your data is safeguarded by state-of-the-art security measures, including encryption and multi-factor authentication.</li>
 			</ul>
-			<p>Donec id arcu <strong>non magna accumsan malesuada</strong> sed accumsan enim.</p>
+			<p><a href="#early-access">Join the myCloud community today</a> and experience the convenience and security of our cloud storage platform. Whether you're storing personal documents, collaborating on projects with colleagues, or sharing memories with friends and family, myCloud has you covered. <a href="#download">Download the app</a> now and unlock a world of seamless file management at your fingertips.</p>
 		</section>
 		<section id="demo">
-			<h2>Please show me!</h2>
-			<p>Vivamus rutrum velit a nisl faucibus eu sagittis urna condimentum. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading StyleSheet">CSS</abbr> Proin eu libero nulla, non vehicula ante. Cras malesuada sem id velit pretium sagittis.</p>
+			<h2>
+				<a href="#demo" title="Direct link">#</a>
+				Please show me!
+			</h2>
+			<p>Let's dive into a quick <abbr title="JavaScript">JS</abbr> code illustration of how easy it is to upload a file to myCloud using our Web version:</p>
 			<figure>
 				<pre>
-label[for^="toggle"], [type=checkbox] {cursor: pointer}
-label[for^="toggle"] + [type=checkbox] {display: none}
+// Upload file to myCloud
+const fileInput = document.getElementById('fileInput');
+const uploadButton = document.getElementById('uploadButton');
 
-/* MEDIA QUERY */
-@media (max-width: 800px) {
-	section, #aside {
-		padding: 1em;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	header {
-		position: relative; 
-		padding: 1em .8em;
-		background: #2D2D2D;
-	}
-}</pre>
+uploadButton.addEventListener('click', () => {
+  const file = fileInput.files[0];
+  if (!!file) {
+    // Code to upload file to myCloud server
+    console.log(`Uploading ${file.name} to myCloud…`);
+  } else {
+    console.error('No file selected.');
+  }
+});</pre>
 				<figcaption>This is a frakking awesome code sample!</figcaption>
 			</figure>
-			<p>Nunc vel auctor orci. Nullam sit amet quam risus, vitae bibendum neque. Vestibulum vitae odio sed lorem <code>section</code> and <code>header</code> scelerisque faucibus. Integer convallis lacinia viverra.</p>
-			<p>Nam porta, mi vel ullamcorper porta, sem elit aliquet felis, at ullamcorper dolor ipsum quis velit. <a href="#">Phasellus condimentum</a>, neque eu malesuada ultricies, sem justo adipiscing justo, vel ultricies lorem odio in mauris.</p>
+			<p>In this example, users can select a file using a file input element <code>fileInput</code>, and upon clicking the upload button <code>uploadButton</code>, the selected file is uploaded to myCloud's server.</p>
+			<p>If you're interested on how our <abbr title="Application Programming Interface">API</abbr> works, let's deep dive into <a href="#">our documentation</a>.</p>
 		</section>
 		<section id="features">
-			<h2>Ok, so what's inside?</h2>
+			<h2>
+				<a href="#features" title="Direct link">#</a>
+				Ok, so what's inside?
+			</h2>
+			<p>Here's why myCloud stands out across Web, Mobile, and Desktop versions:</p>
 			<table>
 				<caption>Outstanding features!</caption>
 				<colgroup>
@@ -108,7 +118,7 @@ label[for^="toggle"] + [type=checkbox] {display: none}
 							<a href="#col-mobile">Mobile</a>
 						</th>
 						<th scope="col">
-		  					<a href="#col-desktop">Desktop</a>
+							<a href="#col-desktop">Desktop</a>
 						</th>
 					</tr>
 				</thead>
@@ -122,42 +132,56 @@ label[for^="toggle"] + [type=checkbox] {display: none}
 				</tfoot>
 				<tbody>
 					<tr>
-						<th scope="row">Lorem ipsum</th>
-						<td>Yeah</td>
-						<td>Yeah</td>
-						<td>Yeah</td>
+						<th tabindex="-1" scope="row">Generous Storage Space</th>
+						<td tabindex="-1">Enjoy ample storage space for all your files.</td>
+						<td tabindex="-1">Access your files on the go, anytime, anywhere.</td>
+						<td tabindex="-1">Seamlessly sync files with your desktop environment.</td>
 					</tr>
 					<tr>
-						<th scope="row">Dolor sit amet</th>
-						<td>Yeah</td>
-						<td>Yeah</td>
-						<td></td>
+						<th tabindex="-1" scope="row">Seamless Syncing</th>
+						<td tabindex="-1">Synchronize your files effortlessly across devices.</td>
+						<td tabindex="-1">Automatic backup ensures your files are always safe.</td>
+						<td tabindex="-1">Access files even when offline, with automatic syncing upon reconnection.</td>
 					</tr>
 					<tr>
-						<th scope="row">Consectetur adipiscing elit</th>
-						<td>Yeah</td>
-						<td>Yeah</td>
-						<td>Yeah</td>
+						<th tabindex="-1" scope="row">Robust Security	</th>
+						<td tabindex="-1">Advanced encryption keeps your data secure at all times.</td>
+						<td tabindex="-1">Biometric authentication adds an extra layer of security.</td>
+						<td tabindex="-1">AES-256 encryption ensures maximum data protection.</td>
 					</tr>
 					<tr>
-						<th scope="row">Proin neque ligula</th>
-						<td>Yeah</td>
-						<td></td>
-						<td>Yeah</td>
+						<th tabindex="-1" scope="row">User-Friendly Interface</th>
+						<td tabindex="-1">Intuitive design makes file management a breeze.</td>
+						<td tabindex="-1">Easily upload, download, and share files on the fly.</td>
+						<td tabindex="-1">Familiar interface for efficient navigation and organization.</td>
 					</tr>
 					<tr>
-						<th scope="row">Cum sociis natoque penatibus</th>
-						<td></td>
-						<td></td>
-						<td>Yeah</td>
+						<th tabindex="-1" scope="row">Customizable Settings</th>
+						<td tabindex="-1">Tailor settings to suit your preferences and needs.</td>
+						<td tabindex="-1">Customize notifications and privacy settings.</td>
+						<td tabindex="-1">Personalize file organization and synchronization settings.</td>
 					</tr>
 				</tbody>
 			</table>
 		</section>
+		<section id="early-access">
+			<h2>
+				<a href="#early-access" title="Direct link">#</a>
+				Gimme now!
+			</h2>
+			<p>Be the first to experience the latest updates and exclusive features of myCloud by signing up for early access. Simply enter your email address below and click the button to join the myCloud community!</p>
+			<form action="#">
+				<label for="email-input">Your email address</label>
+				<input id="email-input" title="Fill in this form field with your email address, please 😁" placeholder="" type="email" inputmode="email" autocomplete="email" required>
+				<button type="submit">send</button>
+			</form>
+		</section>
 		<section id="download">
-			<h2>High five, bro!</h2>
-			<p>Proin neque ligula, sagittis sed tincidunt at, scelerisque in nisl. Aenean non libero sed est scelerisque pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-			<p>Aliquam tincidunt laoreet est, vel malesuada nunc vehicula a. Praesent rutrum auctor justo, posuere convallis <strong>magna aliquam sit amet</strong>. Donec ac risus ut eros elementum tempus vel eu urna. Sed dignissim ultrices felis, convallis mollis nisi suscipit nec. Nullam non tincidunt augue.</p>
+			<h2>
+				<a href="#download" title="Direct link">#</a>
+				High five, bro!
+			</h2>
+			<p>Ready to experience the ultimate in cloud storage convenience? Download myCloud now and unlock a world of seamless file management across all your devices.</p>
 			<div>
 				<a href="#">
 					<svg viewBox="0 0 512 512" aria-hidden="true">
@@ -173,11 +197,11 @@ label[for^="toggle"] + [type=checkbox] {display: none}
 		<div>
 			<section>
 				<h3>Blog</h3>
-				<p>Duis pharetra, lorem in vulputate blandit, quam ipsum tincidunt lectus, sed tincidunt nisi mauris in leo. <a href="#">See more&hellip;</a></p>
+				<p>Check out our <a href="#">latest blog post</a>:<br>"5 Tips for Maximizing Productivity with Cloud Storage" to learn how you can make the most out of your myCloud experience.</p>
 			</section>
 			<section>
-				<h3>Twitter</h3>
-				<p>RT <a href="#">@codrops</a> Responsive CSS Timeline with 3D Effect <a href="#">goo.gl/OkluS</a> <a href="#">#wdfr</a> <a href="#">#CSS3</a> — Nice!</p>
+				<h3>About</h3>
+				<p>Design created by <a href="https://github.com/Twikito">Matthieu Bué</a> as part of his training in <abbr title="Cascading StyleSheet">CSS</abbr>, web layout and optimizations.<br>Text content created by OpenAI Assistant, using <a href="https://chat.openai.com/">ChatGPT 3.5</a>.</p>
 			</section>
 		</div>
 	</footer>
