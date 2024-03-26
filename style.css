@@ -1,14 +1,26 @@
 :root {
-    --primary: #4696D0;
-    --primary-dark: #2877B0;
+    --primary: #4696d0;
+    --primary-dark: #2877b0;
 	--secondary: #26ec96;
-	--secondary-dark: #18A464;
-	--secondary-darker: #4C5D55;
+	--secondary-dark: #18a464;
+	--secondary-darker: #4c5d55;
 }
 
 ::selection {
     background-color: var(--primary-dark);
     color: white;
+}
+
+* {
+	scrollbar-color: #b6cbdb transparent;
+	scrollbar-width: thin;
+}
+
+/* Only for hoverable devices */
+@media (hover: hover) and (pointer: fine) {
+	body :not(:hover, :focus, :focus-within) {
+		scrollbar-color: transparent transparent;
+	}
 }
 
 html {
@@ -17,26 +29,30 @@ html {
 
 body {
     margin: 0;
-    background-color: #f7f7f7;
-    font-family: 'Inter', sans-serif;
+    background-color: whitesmoke;
+}
+
+body,
+input {
+	font-family: 'Noto Serif', sans-serif;
     line-height: 1.5;
-    color: #6a6a6a;
+    color: #333;
 }
 
 header,
 nav,
 main,
 footer div {
-    /* Global inline-size definition: 620px in rem */
-    max-inline-size: 38.75rem;
+    /* Global inline-size definition: 640px in rem */
+    max-inline-size: 40rem;
     margin-inline: auto;
-    padding: 0 1em;
+    padding: 0 1rem;
 }
 
 a {
     color: var(--secondary-dark);
     text-decoration: underline;
-    transition: .2s ease-out;
+    transition: .15s ease-out;
 }
 
 a:hover,
@@ -49,26 +65,25 @@ strong {
 }
 
 header {
-    margin-block-start: 3em;
-    margin-block-end: 4em;
+    margin-block: 6rem;
     text-align: center;
     color: var(--primary);
 }
 
 header svg {
     display: block;
-    max-inline-size: 10em;
+	inline-size: 40vw;
+    max-inline-size: 12rem;
     margin-inline: auto;
-    margin-block-end: 1em;
+    margin-block-end: 1rem;
     fill: white;
     animation: cloud 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) alternate infinite;
     filter:
-        drop-shadow(0 0.1em 0 #eee)
-        drop-shadow(0 0.1em 0 #ddd)
-        drop-shadow(0 0.1em 0 #ccc)
-        drop-shadow(0 0.1em 0 #bbb)
-        drop-shadow(0 0.1em 0.1em rgb(0 0 0 / .3))
-        drop-shadow(0 1em 1em rgb(0 0 0 / .2));
+        drop-shadow(0 0.125em 0 #ddd)
+        drop-shadow(0 0.125em 0 #ccc)
+        drop-shadow(0 0.125em 0 #bbb)
+        drop-shadow(0 0.125em 0.125em rgb(0 0 0 / .4))
+        drop-shadow(0 1em 1em rgb(0 0 0 / .3));
 }
 
 h1 {
@@ -76,7 +91,7 @@ h1 {
     margin: 0;
     display: inline flow-root;
     font-weight: 500;
-    font-size: 3.75em;
+    font-size: clamp(3em, 15vw, 5em);
     line-height: .8;
     text-align: end;
     letter-spacing: -.05em;
@@ -89,8 +104,8 @@ h1 span {
     letter-spacing: -.02em;
 }
 
-input,
-label {
+body > input,
+body > label {
     display: none;
 }
 
@@ -101,13 +116,16 @@ nav {
 }
 
 nav a {
-    flex: 0 1 8em;
+    flex: 0 1 5.5em;
     background-color: var(--primary);
     color: white;
     box-sizing: border-box;
-    padding: .5em;
+    padding: .25em;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.25em;
     text-decoration: none;
     text-align: center;
+	transition-property: background-color;
 }
 
 nav a:hover,
@@ -123,41 +141,85 @@ main section {
 h2,
 h3 {
     margin: 1em 0 .5em;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 3.75em;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2em, 10vw, 3.5em);
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.2;
     color: var(--primary);
     text-shadow: 0 -1px 0 #222;
     text-transform: capitalize;
 }
 
-blockquote {
-    font-style: italic;
-    quotes: "« "" »";
+h2 {
+	position: relative;
 }
 
-blockquote::before {
+h2 a {
+	position: absolute;
+	inset-inline-end: 100%;
+	font-weight: 300;
+	color: silver;
+	text-decoration: none;
+	text-shadow: none;
+	opacity: 0;
+}
+
+h2:hover a,
+h2 a:focus {
+	opacity: 1;
+}
+
+h2 a:hover,
+h2 a:focus {
+	color: var(--secondary-dark);
+}
+
+blockquote {
+	margin-block: 2rem;
+	margin-inline: 0;
+	padding-inline: 2rem;
+	border-inline-start: .25rem solid var(--primary);
+}
+
+blockquote p {
+	font-style: italic;
+    quotes: "“" "”" "‘" "’";
+}
+
+blockquote p::before {
     content: open-quote;
 }
 
-blockquote::after {
+blockquote p::after {
     content: close-quote;
 }
 
+blockquote cite {
+	display: block;
+	text-align: end;
+}
+
+blockquote cite::before {
+	content: '— ';
+}
+
+li::marker {
+	color: darkgrey;
+}
+
 abbr {
-    text-decoration: underline dotted #6a6a6a;
+    text-decoration: underline dotted currentcolor;
+	text-underline-offset: 0.125em;
 }
 
 figure {
-    margin: 2em 0;
+    margin: 2rem 0;
 }
 
 figcaption,
 caption {
     font-style: italic;
     font-size: .875em;
-    margin: .5em 0;
 }
 
 figcaption {
@@ -165,11 +227,18 @@ figcaption {
 }
 
 caption {
+    margin-block-start: 1rem;
     text-align: center;
+	caption-side: bottom;
+}
+
+pre,
+code {
+	font-family: 'JetBrains Mono', monospace;;
 }
 
 pre {
-    padding: 1em 2em;
+    padding: 1rem;
     background-color: white;
     border: 1px solid var(--primary);
     box-shadow: 0 0 1em rgb(116 208 255 / .5);
@@ -178,68 +247,205 @@ pre {
 }
 
 code {
-    padding: .25em;
+    padding-inline: .125em;
     background-color: white;
     border: 1px solid var(--primary);
 }
 
 table {
     inline-size: 100%;
+	margin: 2rem 0;
+	overflow: hidden;
     border-collapse: collapse;
 }
 
 col {
-    inline-size: 20%;
-}
-
-col:first-child {
-    inline-size: 40%;
-}
-
-col:nth-child(even) {
-    background-color: #f0f0f0;
+    inline-size: calc(100% / 4);
+	transition: background-color .15s ease-out;
 }
 
 col:target {
-  background-color: #2ca6e533;
+  background-color: #26ec9644;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: #fffa;
+table:not(:has(col:target, tbody td:hover, tbody td:focus)) col:nth-child(even) {
+    background-color: #eaeaea;
+}
+
+table:not(:has(col:target, tbody td:hover, tbody td:focus)) tbody tr:nth-child(odd) {
+    background-color: white;
+	transition: background-color .15s ease-out;
 }
 
 th,
 td {
-    padding: .75em 2%;
-    text-align: center;
+	padding: .75rem 2%;
 }
 
-th:first-child {
-    text-align: start;
-}
-
-thead,
-tfoot,
+tbody th,
 tbody td {
-    text-transform: uppercase;
-    font-weight: bold;
+	font-size: 0.875rem;
+	word-break: break-word;
+    text-align: start;
+	vertical-align: top;
 }
 
-tbody th {
-    font-weight: normal;
+tbody td {
+	position: relative;
 }
 
-thead th a,
+tbody td:hover,
+tbody td:focus {
+	color: black;
+}
+
+tbody td::before,
+tbody td::after {
+	position: absolute;
+	z-index: -1;
+	background-color: var(--primary);
+	opacity: 0;
+	content: '';
+	pointer-events: none;
+	transition: opacity .15s ease-out;
+}
+
+tbody td::before {
+	inset-block: 0;
+	inset-inline: -100vw;
+}
+
+tbody td::after {
+	inset-block: -100vw;
+	inset-inline: 0;
+}
+
+tbody td:hover::before,
+tbody td:hover::after {
+	opacity: .1;
+}
+
+tbody td:focus::before,
+tbody td:focus::after {
+	opacity: .2;
+}
+
+thead th,
 tfoot td {
+	font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+	text-align: center;
+}
+
+thead th a {
     color: var(--primary-dark);
 }
 
-tbody td {
+tfoot th {
+	text-align: start;
+}
+
+tfoot td {
     color: var(--secondary-dark);
 }
 
+form {
+	position: relative;
+	display: block flex;
+	max-inline-size: 25em;
+	margin: 3em auto;
+	justify-content: center;
+	align-items: stretch;
+	border: 1px solid var(--primary);
+	border-radius: .5rem;
+	background-color: var(--primary);
+}
+
+form:hover {
+	border-color: var(--primary-dark);
+}
+
+form:focus-within {
+	box-shadow: 0 0 3em black;
+}
+
+form::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: 1;
+	background: rgb(0 0 0 / .7);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: all .15s ease-out;
+}
+
+form:focus-within::before {
+	opacity: 1;
+	visibility: visible;
+}
+
+form label {
+	position: absolute;
+	z-index: 3;
+	inset-block-start: 50%;
+	inset-inline-start: .5rem;
+	translate: 0 -50%;
+	font-size: 1.25em;
+	font-style: italic;
+	color: grey;
+	transition: .15s ease-out;
+}
+
+form:focus-within label,
+form:has(input:not(:placeholder-shown)) label {
+	translate: -.5rem -220%;
+	font-size: 1em;
+	color: var(--primary-dark);
+}
+
+form:focus-within label {
+	color: white !important;
+}
+
+form input {
+	z-index: 2;
+	inline-size: 100%;
+	padding: .5rem;
+	border: none;
+	outline: none;
+	border-start-start-radius: .5rem;
+	border-end-start-radius: .5rem;
+	box-sizing: border-box;
+	background: white;
+	font-size: 1.25em;
+}
+
+form button {
+	z-index: 4;
+	padding-inline: .5rem;
+	background-color: var(--primary);
+	border: none;
+	border-start-end-radius: .5rem;
+	border-end-end-radius: .5rem;
+	color: white;
+	font-size: 1.25rem;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: .15s ease-out;
+}
+
+form button:hover,
+form button:focus {
+	background-color: var(--secondary);
+	color: var(--secondary-darker);
+}
+
 main div {
-    margin: 3em 0;
+    margin: 3rem 0;
     text-align: center;
 }
 
@@ -248,10 +454,10 @@ main div a {
 	align-items: center;
 	gap: .25em;
     background-color: #ffc843;
-    color: #B25F03;
+    color: #b25f03;
     text-decoration: none;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 3em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
     padding: .1em .5em;
     text-transform: capitalize;
     box-shadow: 0 .1em 0 #ffa823;
@@ -268,6 +474,7 @@ main div a:focus {
 main div a svg {
     inline-size: 1em;
     block-size: 1em;
+	flex: 0 0 1em;
 	fill: currentcolor;
     transition: inherit;
 	transition-property: rotate;
@@ -281,9 +488,6 @@ main div a:focus svg {
 footer {
     padding: 1.5em 0 2em;
     background-color: var(--primary);
-}
-
-footer * {
     color: white;
 }
 
@@ -295,178 +499,200 @@ footer div {
 }
 
 footer h3 {
+	color: inherit;
     text-shadow: none;
 }
 
 footer a {
-    color: white;
-    text-decoration: none;
+	color: inherit;
     font-weight: bold;
 }
 
-footer a:hover,
-footer a:focus {
-    text-decoration: underline;
-}
-
-@media (max-width: 26em) {
-    header {
-        margin-block-start: 5em;
-        margin-block-end: 1em;
-    }
-
-    label,
-    input {
-        position: absolute;
-        display: block;
-    }
-
-    input {
-        /* Do not use display: none */
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    label {
-        cursor: pointer;
-        transition: .2s ease-in-out;
-    }
-
-    label span {
-        position: fixed;
-        inset-block-start: 1em;
-        inset-inline-start: 1em;
-        z-index: 10;
-        padding: .5em;
-        background-color: var(--primary);
-        color: white;
-    }
-
-    label span::before {
-        content: '☰';
-        display: inline flow-root;
-        margin-inline-end: .5em;
-        transition: .2s ease-in-out;
-    }
-
-    label:hover span,
-    input:focus ~ label span {
-        background-color: var(--secondary);
-    }
-
-    label::before {
-        /* Outside nav area */
-        position: fixed;
-        inset: 0;
-        z-index: 8;
-        visibility: hidden;
-        opacity: 0;
-        background-color: rgb(255 255 255 / .5);
-        pointer-events: none;
-        backdrop-filter: blur(2px);
-        transition: .2s ease-out;
-        content: '';
-    }
-
-    nav {
-        position: fixed;
-        inset-block-start: 0;
-        inset-inline-start: 0;
-        inset-block-end: 0;
-        z-index: 9;
-        padding: 4em 1em 1em;
-        flex-direction: column;
-        justify-content: flex-start;
-        translate: -100%;
-        background-color: var(--primary);
-        transition: .2s ease-out;
-    }
-
-    nav a {
-        flex-basis: auto;
-        margin: .5em 0;
-        background-color: none;
-        text-align: start;
-    }
-
-    input:checked ~ nav {
-        translate: 0;
-    }
-
-    input:checked ~ nav a:hover,
-    input:checked ~ nav a:focus,
-    input:checked ~ label:hover span,
-    input:checked:focus ~ label span {
-        background-color: white;
-        color: var(--primary);
-    }
-
-    input:checked ~ label::before {
-        visibility: visible;
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    input:checked ~ label span::before {
-        content: '✕';
-        rotate: 180deg;
-    }
-
-    h2,
-    h3 {
-        font-size: 2.75em;
-    }
-
-    colgroup {
-        display: none;
-    }
-
-    tr {
-        display: block flex;
-        margin: 1em 0;
-        flex-flow: row wrap;
-        align-items: stretch;
-        border: solid #d0d0d0;
-        border-width: .15em 0;
-        background-color: white;
-    }
-
-    tr > * {
-        display: inline flow-root;
-        box-sizing: border-box;
-        flex: 1;
-    }
-
-    th:nth-child(even),
-    td:nth-child(even) {
-        background-color: #f0f0f0;
-    }
-
-    th:first-child {
-        text-align: center;
-    }
-
-    thead {
-        position: sticky;
-        inset-block-start: 3.5em;
-    }
-
-    thead th:first-child {
-        display: none;
-    }
-
-    tbody th,
-    tfoot th {
-        flex-basis: 100%;
-    }
-
-    main div a {
-        font-size: 2em;
-    }
-
-    footer div {
-        grid-template-columns: auto;
-    }
+@media (max-width: 30em) {
+	header {
+		margin-block-end: 1rem;
+	}
+	
+	body > input {
+		position: fixed;
+		display: initial;
+		/* Do not use display: none or visibility: hidden; */
+		opacity: 0;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+	}
+	
+	body > label {
+		position: absolute;
+		display: initial;
+		cursor: pointer;
+		transition: .15s ease-out;
+	}
+	
+	body > label span {
+		position: fixed;
+		inset-block-start: 1rem;
+		inset-inline-start: 1rem;
+		z-index: 10;
+		padding: .5rem;
+		background-color: var(--primary);
+		color: white;
+		transition: inherit;
+	}
+	
+	body > label span::before {
+		content: '☰';
+		display: inline flow-root;
+		margin-inline-end: .5em;
+		font-weight: bold;
+		transition: inherit;
+		transition-property: rotate;
+	}
+	
+	body > label:hover span,
+	body > input:focus ~ label span {
+		background-color: var(--secondary);
+		color: var(--secondary-darker);
+	}
+	
+	body > label::before {
+		/* Outside nav area */
+		position: fixed;
+		inset: 0;
+		z-index: 8;
+		visibility: hidden;
+		opacity: 0;
+		background-color: rgb(255 255 255 / .5);
+		pointer-events: none;
+		backdrop-filter: blur(2px);
+		transition: inherit;
+		content: '';
+	}
+	
+	nav {
+		position: fixed;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		inset-block-end: 0;
+		z-index: 9;
+		padding: 4rem 1rem 1rem;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: .5rem;
+		visibility: hidden; /* Makes navigation unfocusable */
+		translate: -100%;
+		background-color: var(--primary);
+		transition: .15s ease-out;
+	}
+	
+	body > input:checked ~ nav {
+		translate: 0;
+		box-shadow: 0 0 3em #0008;
+		visibility: visible;
+	}
+	
+	nav a {
+		flex-basis: auto;
+		background-color: none;
+		text-align: start;
+	}
+	
+	nav a:hover,
+	nav a:focus,
+	body > input:checked ~ label:hover span,
+	body > input:checked:focus ~ label span {
+		background-color: white;
+		color: var(--primary);
+	}
+	
+	body > input:checked ~ label::before {
+		visibility: visible;
+		opacity: 1;
+		pointer-events: auto;
+	}
+	
+	body > input:checked ~ label span::before {
+		content: '✕';
+		rotate: 180deg;
+	}
+	
+	table {
+		overflow: initial;
+	}
+	
+	colgroup {
+		display: none;
+	}
+	
+	tr {
+		display: block flex;
+		margin: 1em 0;
+		flex-flow: row wrap;
+		align-items: stretch;
+		border: solid #d0d0d0;
+		border-width: .125em 0;
+		background-color: white;
+	}
+	
+	tr > * {
+		display: inline flow-root;
+		box-sizing: border-box;
+		flex: 1;
+	}
+	
+	th:nth-child(even),
+	td:nth-child(even) {
+		background-color: #f0f0f0;
+	}
+	
+	th:first-child {
+		text-align: center;
+	}
+	
+	thead {
+		position: sticky;
+		inset-block-start: 3.5em;
+	}
+	
+	thead tr {
+		border-color: var(--primary);
+	}
+	
+	thead th:first-child {
+		display: none;
+	}
+	
+	tbody th,
+	tfoot th {
+		flex-basis: 100%;
+	}
+	
+	tbody td {
+		position: initial;
+	}
+	
+	tbody td:hover,
+	tbody td:focus {
+		color: currentcolor;
+	}
+	
+	tbody td::before,
+	tbody td::after {
+		content: none;
+	}
+	
+	form label,
+	form input {
+		font-size: 1em;	
+	}
+	
+	main div a {
+		font-size: 2em;
+	}
+	
+	footer div {
+		grid-template-columns: auto;
+	}
 }
 
 @keyframes cloud {
