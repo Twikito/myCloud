@@ -6,6 +6,7 @@
 	<title>☁ myCloud: HTML and CSS first practice for students</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noindex, nofollow">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Source+Sans+3:wght@200..900&display=swap">
@@ -13,6 +14,7 @@
 </head>
 
 <body>
+	<!-- navigation button for mobile -->
 	<input type="checkbox" id="nav-trigger" role="button" title="Navigation">
 	<label for="nav-trigger" tabindex="-1" title="Navigation">
 		<svg viewBox="0 0 18 18">
@@ -22,6 +24,7 @@
 		</svg>
 		<span>Navigation</span>
 	</label>
+
 	<header>
 		<svg viewBox="0 0 640 512">
 			<!-- https://fontawesome.com/icons/cloud?f=classic&s=solid -->
@@ -35,6 +38,7 @@
 			</span>
 		</h1>
 	</header>
+
 	<nav>
 		<a href="#what">what?</a>
 		<a href="#demo">demo</a>
@@ -42,6 +46,7 @@
 		<a href="#early-access">early</a>
 		<a href="#download">download</a>
 	</nav>
+
 	<main>
 		<section id="what">
 			<h2>
@@ -136,6 +141,10 @@ uploadButton.addEventListener('click', () => {
 					</tr>
 				</tfoot>
 				<tbody>
+					<!--
+						tabindex props to make cells focusable
+						value '-1' to ensure cells can only be focused using the mouse or a tap, and not the keyboard
+	 				-->
 					<tr>
 						<th tabindex="-1" scope="row">Generous Storage Space</th>
 						<td tabindex="-1">Enjoy ample storage space for all your files.</td>
@@ -198,6 +207,7 @@ uploadButton.addEventListener('click', () => {
 			</div>
 		</section>
 	</main>
+
 	<footer>
 		<div>
 			<section>
