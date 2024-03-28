@@ -485,7 +485,7 @@ main div a:focus svg {
 	rotate: 360deg;
 }
 
-footer {
+body > footer {
 	padding: 1.5em 0 2em;
 	background-color: var(--primary);
 	color: white;
@@ -501,6 +501,10 @@ footer div {
 footer h3 {
 	color: inherit;
 	text-shadow: none;
+}
+
+footer footer {
+	font-style: italic;
 }
 
 footer a {
