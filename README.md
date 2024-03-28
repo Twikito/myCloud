@@ -1,4 +1,6 @@
-# myCloud: HTML and CSS first practice for students
+# myCloud: first practice in HTML and CSS for students
+
+This is a practical exercise as part of a training course in HTML, CSS, web layout and advanced optimization.
 
 ## Context
 
