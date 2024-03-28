@@ -2,9 +2,9 @@
 
 ## Context
 
-You received [this mockup](https://cdn.jsdelivr.net/gh/Twikito/myCloud/mockup.png) from the designer, without any further information. This often happens.
+As a front-end developer, you received [this mockup](https://cdn.jsdelivr.net/gh/Twikito/myCloud/mockup.png) from the designer, without any additional information. This often happens.
 
-All you know is that you need to optimize this page for SEO.
+All you know is that your page needs to be optimized for SEO and mobile display.
 
 ## Statement
 
@@ -19,7 +19,7 @@ But you can use:
 
 Pay particular attention to __semantics__.
 
-## What you need to know
+## Resources
 
 __Text__:
 - You can find all the [text content here](https://cdn.jsdelivr.net/gh/Twikito/myCloud/text.md).
