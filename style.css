@@ -217,7 +217,8 @@ figure {
 }
 
 figcaption,
-caption {
+caption,
+small {
 	font-style: italic;
 	font-size: .875em;
 }
@@ -501,10 +502,6 @@ footer div {
 footer h3 {
 	color: inherit;
 	text-shadow: none;
-}
-
-footer footer {
-	font-style: italic;
 }
 
 footer a {
