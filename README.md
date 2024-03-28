@@ -48,7 +48,7 @@ __Icons__:
 
 The main aim of this practice is to force students to take a step back from what they see and __focus on content rather than appearance__. Here, they'll have to use __the right HTML tags for each piece of textual content__, and not according to the browser's default appearance.
 
-They should then use __type selectors only__ to style their page, with pseudo-classes if necessary.
+They should then use __type selectors only__ to style their page, with pseudo-classes or pseudo-elements if necessary.
 
 Without taking this step back, and using different HTML tags appropriate to the content, completing this exercise is impossible… well, almost.
 
