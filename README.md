@@ -52,7 +52,7 @@ The main aim of this practice is to force students to take a step back from what
 
 They should then use __type selectors only__ to style their page, with pseudo-classes or pseudo-elements if necessary.
 
-Without taking this step back, and using different HTML tags appropriate to the content, completing this exercise is impossible… well, almost.
+Without taking this step back, and using different HTML tags appropriate to the content, completing this exercise is impossible… well, not in a right way.
 
 ## Result
 
